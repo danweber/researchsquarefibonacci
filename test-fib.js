@@ -1,5 +1,9 @@
 require('./fibonacci.js')
 f = fibonacci;
-for (var i = 0; i < 10; i++) {
-    console.log(i + "\t" + f.calculate(i));
+for (var i = 0; i < 100; i++) {
+    var start = new Date().getTime();
+    ans = f.calculate(i);
+    var end = new Date().getTime();
+    var millisec = end - start;
+    console.log(i + "\t" + millisec + "\t" + ans);
 }
